@@ -13,7 +13,7 @@ services:
   app:
     container_name: app
     build: ./node
-    entrypoint: dockerize -wait tcp://db:3306 node index.js
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 120s node index.js
     volumes: 
       - ./node:/usr/src/app
       - /usr/src/app/node_modules
