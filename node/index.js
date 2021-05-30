@@ -6,7 +6,7 @@ const port = 3000;
 
 app.get('/', (req,res) => {
   var con = mysql.createConnection({
-    host: 'pfa-mysql',
+    host: 'db',
     user: 'root',
     password: 'root',
     database: 'pfa'
