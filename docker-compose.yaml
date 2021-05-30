@@ -24,7 +24,7 @@ services:
     container_name: nginx
     build: ./nginx
     restart: always
-    entrypoint: dockerize -wait http://app:3000 /docker-entrypoint.sh nginx -g 'daemon off;'
+    entrypoint: dockerize -wait http://app:3000 -timeout 120s /docker-entrypoint.sh nginx -g 'daemon off;'
     ports: 
       - 8080:80
     depends_on: 
