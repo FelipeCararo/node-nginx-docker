@@ -1,4 +1,3 @@
-# node-nginx-docker 
 # Rode o comando
 - docker-compose up --build
 
